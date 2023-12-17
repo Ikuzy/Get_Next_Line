@@ -118,24 +118,24 @@ char	*get_next_line(int fd)
 		return (free(line), NULL);
 	return (line);
 }
-int	main(void)
-{
-	char *str;
-	int fd;
-	int fd1;
-	fd = open("test", O_RDONLY);
-	fd1 = open("tests", O_RDONLY);
-	while (1)
-	{
-		str = get_next_line(fd);
-		printf("%s", str);
-		if (!str)
-			break;
-		// lseek(fd, 0, 0);
-		str = get_next_line(fd1);
-		printf("%s", str);
-		free(str);
-	}
-	free(str);
-	return (0);
-}
+// int	main(void)
+// {
+// 	char *str;
+// 	int fd;
+// 	int fd1;
+// 	fd = open("test", O_RDONLY);
+// 	fd1 = open("tests", O_RDONLY);
+// 	while (1)
+// 	{
+// 		str = get_next_line(fd);
+// 		printf("%s", str);
+// 		if (!str)
+// 			break;
+// 		// lseek(fd, 0, 0);
+// 		str = get_next_line(fd1);
+// 		printf("%s", str);
+// 		free(str);
+// 	}
+// 	free(str);
+// 	return (0);
+// }
